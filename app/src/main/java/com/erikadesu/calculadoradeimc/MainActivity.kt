@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
         btnMainCalculate.setOnClickListener {
             val weight = edtMainWeight.text.toString()
             val height = edtMainHeight.text.toString()
-            val heightInM = height.toFloat() * 0.01
 
             if (weight.isEmpty() || height.isEmpty()) {
                 Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_LONG).show()
@@ -26,6 +25,7 @@ class MainActivity : AppCompatActivity() {
                     edtMainHeight.requestFocus()
                 }
             } else {
+                val heightInM = height.toFloat() * 0.01
                 val results = weight.toFloat() / (heightInM * heightInM)
                 val mIntent = Intent(this, ResultsActivity::class.java)
 
