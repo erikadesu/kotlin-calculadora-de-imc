@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_spa_24" />
+        app:srcCompat="@drawable/scale" />
 
     <TextView
         android:id="@+id/textView"
@@ -29,7 +29,7 @@
         android:layout_marginBottom="32dp"
         android:backgroundTint="#3F51B5"
         android:text="Calculadora de IMC"
-        android:textColor="@color/colorPrimaryLight"
+        android:textColor="@color/colorLightPink"
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
