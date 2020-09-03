@@ -6,4 +6,5 @@
     <color name="colorAccent">#F06292</color>
     <color name="colorLightPink">#EF9A9A</color>
     <color name="colorBackgroundDark">#391651</color>
+    <color name="colorBackgroundLight">#225D7C</color>
 </resources>
