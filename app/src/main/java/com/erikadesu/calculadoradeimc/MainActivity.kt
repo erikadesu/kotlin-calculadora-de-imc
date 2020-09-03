@@ -3,6 +3,7 @@ package com.erikadesu.calculadoradeimc
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.SeekBar
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -25,11 +26,11 @@ class MainActivity : AppCompatActivity() {
                     edtMainHeight.requestFocus()
                 }
             } else {
-                val heightInM = height.toFloat() * 0.01
-                val results = weight.toFloat() / (heightInM * heightInM)
+                val results = weight.toFloat() / (height.toFloat() * height.toFloat())
                 val mIntent = Intent(this, ResultsActivity::class.java)
+                val formattedResults = String.format("%.1f", results)
 
-                mIntent.putExtra("INTENT_RESULTS", results.toString())
+                mIntent.putExtra("INTENT_RESULTS", formattedResults)
                 startActivity(mIntent)
             }
         }
